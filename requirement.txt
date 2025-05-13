@@ -8,9 +8,10 @@ fastapi
 uvicorn
 gradio
 requests
-fastapi
 pydantic
-uvicorn
-scikit-learn
-joblib
 httpx
+googletrans==4.0.0rc1
+spacy
+scispacy
+en_ner_bc5cdr_md @ https://huggingface.co/allenai/scispacy_models/resolve/main/en_ner_bc5cdr_md-0.5.1.tar.gz
+
