@@ -156,39 +156,39 @@ def load_doctors():
     # Define some sample doctors if file doesn't exist
     default_doctors = {
         "dr_smith": {
-            "name": "Dr. Aishwarya Sakthi",
+            "name": "Dr. Sarah Smith",
             "specialty": "General Practitioner",
-            "languages": ["English", "Tamil"],
+            "languages": ["English", "Spanish"],
             "availability": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
             "image": "https://picsum.photos/seed/doctor1/100/100",
             "bio": "Board-certified general practitioner with 15 years of experience in family medicine."
         },
         "dr_patel": {
-            "name": "Dr. M.G.Ramachandran",
+            "name": "Dr. Raj Patel",
             "specialty": "Cardiologist",
-            "languages": ["English", "Hindi", "Malayalam"],
+            "languages": ["English", "Hindi", "Gujarati"],
             "availability": ["Monday", "Wednesday", "Friday"],
             "image": "https://picsum.photos/seed/doctor2/100/100",
             "bio": "Cardiologist with expertise in preventive care and management of heart conditions."
         },
         "dr_garcia": {
-            "name": "Dr. Abinaya Raju",
+            "name": "Dr. Elena Garcia",
             "specialty": "Pediatrician",
-            "languages": ["English", "Tamil", "Kannada"],
+            "languages": ["English", "Spanish", "Portuguese"],
             "availability": ["Tuesday", "Thursday", "Saturday"],
             "image": "https://picsum.photos/seed/doctor3/100/100",
             "bio": "Pediatrician specializing in infant and adolescent care with a focus on developmental health."
         },
         "dr_chen": {
-            "name": "Dr. Arjun Kumar.M",
+            "name": "Dr. Li Chen",
             "specialty": "Dermatologist",
-            "languages": ["English", "Hindi", "Cantonese"],
+            "languages": ["English", "Mandarin", "Cantonese"],
             "availability": ["Monday", "Tuesday", "Thursday"],
             "image": "https://picsum.photos/seed/doctor4/100/100",
             "bio": "Dermatologist with expertise in skin conditions and cosmetic procedures."
         },
         "dr_kumar": {
-            "name": "Dr. Kalaivani.J",
+            "name": "Dr. Anita Kumar",
             "specialty": "Psychiatrist",
             "languages": ["English", "Hindi", "Tamil"],
             "availability": ["Wednesday", "Thursday", "Friday"],
