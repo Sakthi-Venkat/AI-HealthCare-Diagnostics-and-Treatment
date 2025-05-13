@@ -1,0 +1,9 @@
+Enter your symptoms (comma separated),Predicted Disease,timestamp
+"Headache , Cold",Error contacting the API.,2025-04-27 12:16:17.441304
+"fever,cough",Error contacting the API.,2025-04-27 12:18:28.515106
+"fever, cough, headache, fatigue
+",Error contacting the API.,2025-04-27 12:19:10.279710
+"fever,cough,fatigue,headache
+",Error contacting the API.,2025-04-27 12:21:57.783166
+"fever,nausea",The predicted disease is: Cold,2025-04-30 08:51:22.248693
+"fever, cough",,2025-05-02 20:09:36.496346

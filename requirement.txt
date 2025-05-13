@@ -1,0 +1,16 @@
+langchain
+openai
+transformers
+scikit-learn
+pandas
+joblib
+fastapi
+uvicorn
+gradio
+requests
+fastapi
+pydantic
+uvicorn
+scikit-learn
+joblib
+httpx
