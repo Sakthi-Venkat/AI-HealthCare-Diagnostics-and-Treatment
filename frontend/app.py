@@ -156,39 +156,39 @@ def load_doctors():
     # Define some sample doctors if file doesn't exist
     default_doctors = {
         "dr_smith": {
-            "name": "Dr. Sarah Smith",
+            "name": "Dr. Aishwarya Sakthi",
             "specialty": "General Practitioner",
-            "languages": ["English", "Spanish"],
+            "languages": ["English", "Tamil"],
             "availability": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
             "image": "https://picsum.photos/seed/doctor1/100/100",
             "bio": "Board-certified general practitioner with 15 years of experience in family medicine."
         },
         "dr_patel": {
-            "name": "Dr. Raj Patel",
+            "name": "Dr. M.G.Ramachandran",
             "specialty": "Cardiologist",
-            "languages": ["English", "Hindi", "Gujarati"],
+            "languages": ["English", "Hindi", "Malayalam"],
             "availability": ["Monday", "Wednesday", "Friday"],
             "image": "https://picsum.photos/seed/doctor2/100/100",
             "bio": "Cardiologist with expertise in preventive care and management of heart conditions."
         },
         "dr_garcia": {
-            "name": "Dr. Elena Garcia",
+            "name": "Dr. Abinaya Raju",
             "specialty": "Pediatrician",
-            "languages": ["English", "Spanish", "Portuguese"],
+            "languages": ["English", "Tamil", "Kannada"],
             "availability": ["Tuesday", "Thursday", "Saturday"],
             "image": "https://picsum.photos/seed/doctor3/100/100",
             "bio": "Pediatrician specializing in infant and adolescent care with a focus on developmental health."
         },
         "dr_chen": {
-            "name": "Dr. Li Chen",
+            "name": "Dr. Arjun Kumar.M",
             "specialty": "Dermatologist",
-            "languages": ["English", "Mandarin", "Cantonese"],
+            "languages": ["English", "Hindi", "Cantonese"],
             "availability": ["Monday", "Tuesday", "Thursday"],
             "image": "https://picsum.photos/seed/doctor4/100/100",
             "bio": "Dermatologist with expertise in skin conditions and cosmetic procedures."
         },
         "dr_kumar": {
-            "name": "Dr. Anita Kumar",
+            "name": "Dr. Kalaivani.J",
             "specialty": "Psychiatrist",
             "languages": ["English", "Hindi", "Tamil"],
             "availability": ["Wednesday", "Thursday", "Friday"],
@@ -330,7 +330,7 @@ def login_page():
             st.session_state.user = username
             st.session_state.user_language = get_user_language(username)
             st.success(f"Welcome back, {username}! Redirecting to dashboard...")
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error("❌ Invalid username or password. Please try again.")
     
@@ -721,7 +721,7 @@ def emergency_call():
         with col_clear:
             if st.button(clear_button, use_container_width=True):
                 st.session_state.dialed_number = ""
-                st.experimental_rerun()
+                st.rerun()
     
     with col3:
         st.markdown(f"### {firstaid_title}")
@@ -746,7 +746,7 @@ def appointment_booking():
     no_appointments = translate_text("You have no scheduled appointments.", current_lang)
     appointment_booked = translate_text("✅ Appointment booked successfully!", current_lang)
     appointment_canceled = translate_text("Appointment cancelled successfully.", current_lang)
-    specialty_label = translate_text("Specialty", current_lang)
+    specialty_label = translate_text("Speciality", current_lang)
     languages_spoken = translate_text("Languages Spoken", current_lang)
     availability = translate_text("Availability", current_lang)
     
@@ -792,7 +792,7 @@ def appointment_booking():
                         if st.button(cancel_button, key=f"cancel_{appointment['id']}", use_container_width=True):
                             if cancel_appointment(st.session_state.user, appointment['id']):
                                 st.success(appointment_canceled)
-                                st.experimental_rerun()
+                                st.rerun()
                     
                     st.markdown("---")
         
@@ -876,7 +876,7 @@ def appointment_booking():
                 # Save the appointment
                 save_appointment(st.session_state.user, selected_doctor_id, formatted_date, selected_time, visit_reason)
                 st.success(appointment_booked)
-                st.experimental_rerun()
+                st.rerun()
         
         st.markdown('</div>', unsafe_allow_html=True)
 
@@ -938,7 +938,7 @@ def doctor_chat():
                 
                 # Clear input
                 st.session_state.message_input = ""
-                st.experimental_rerun()
+                st.rerun()
     
     with col2:
         # Display doctor information
@@ -954,7 +954,7 @@ def doctor_chat():
         st.markdown("### Quick Actions")
         if st.button(translate_text("Book Appointment", current_lang), key="book_from_chat"):
             st.session_state.selected_page = "🗓️ Book Appointment"
-            st.experimental_rerun()
+            st.rerun()
         
         if st.button(translate_text("Start Video Call", current_lang), key="video_from_chat"):
             call_link = f"https://meet.jit.si/healthroom_{st.session_state.user}_{selected_doctor_id}"
@@ -1019,7 +1019,7 @@ def main():
             if new_lang_code != current_lang:
                 update_user_language(st.session_state.user, new_lang_code)
                 st.session_state.user_language = new_lang_code
-                st.experimental_rerun()
+                st.rerun()
             
             st.markdown("---")
             
@@ -1049,7 +1049,7 @@ def main():
             st.markdown('<div class="danger-button">', unsafe_allow_html=True)
             if st.button(f"🔒 {logout_text}", use_container_width=True):
                 del st.session_state.user
-                st.experimental_rerun()
+                st.rerun()
             st.markdown('</div>', unsafe_allow_html=True)
             
             # App info
